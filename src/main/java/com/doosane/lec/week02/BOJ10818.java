@@ -5,7 +5,7 @@ BOJ 10818
 
 import java.util.Scanner;
 
-public class Week02_02_BOJ_10818 {
+public class BOJ10818 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); // 정수의 개수

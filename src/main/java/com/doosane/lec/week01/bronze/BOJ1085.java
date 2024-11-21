@@ -1,4 +1,4 @@
-package com.doosane.lec.week01;
+package com.doosane.lec.week01.bronze;
 
 import java.util.Scanner;
 

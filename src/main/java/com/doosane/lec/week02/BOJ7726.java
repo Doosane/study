@@ -1,7 +1,7 @@
 package com.doosane.lec.week02;
 import java.util.Scanner;
 
-public class Week02_01_BOJ_7726 {
+public class BOJ7726 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

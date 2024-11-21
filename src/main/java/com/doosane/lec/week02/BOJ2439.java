@@ -13,7 +13,7 @@ import java.util.Scanner;
  ****
 *****
  */
-public class Week02_01_BOJ_2439 {
+public class BOJ2439 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
