@@ -3,19 +3,36 @@ import java.io.*;
 
 /**
  * 최대 공통 부분 수열 (Longest Common Subsequence, LCS) 문제 해결
+ * 문제 분석 :
  */
 public class BOJ17218 {
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s1 = br.readLine();
         String s2 = br.readLine();
+
+        // LCS 길이를 저장하는 DP 배열을 계산
+        int[][] dp = calculateLCSLength(s1, s2);
+
+        // LCS 문자열을 추적하여 결과를 얻기
+        String lcs = getLCSString(s1, s2, dp);
+
+        // 결과 출력
+        System.out.println(lcs);
+    }
+
+    /**
+     * 주어진 두 문자열에 대해 LCS의 길이를 계산하는 DP 테이블을 생성
+     * @param s1 첫 번째 문자열
+     * @param s2 두 번째 문자열
+     * @return LCS 길이를 계산한 DP 테이블
+     */
+    private static int[][] calculateLCSLength(String s1, String s2) {
         int N = s1.length();
         int M = s2.length();
-
-        // dp 배열 초기화: dp[i][j]는 s1의 첫 i 문자와 s2의 첫 j 문자의 LCS 길이
         int[][] dp = new int[N + 1][M + 1];
 
-        // 동적 계획법으로 dp 배열 채우기
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= M; j++) {
                 if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
@@ -25,27 +42,33 @@ public class BOJ17218 {
                 }
             }
         }
+        return dp;
+    }
+
+    /**
+     * LCS 길이를 추적하여 LCS 문자열을 반환
+     * @param s1 첫 번째 문자열
+     * @param s2 두 번째 문자열
+     * @param dp LCS 길이를 저장한 DP 테이블
+     * @return LCS 문자열
+     */
+    private static String getLCSString(String s1, String s2, int[][] dp) {
+        StringBuilder lcs = new StringBuilder();
+        int i = s1.length(), j = s2.length();
 
         // LCS 길이를 추적하며 문자열을 구성
-        StringBuilder lcs = new StringBuilder();
-        int i = N, j = M;
-
         while (i > 0 && j > 0) {
-            // 일치하는 문자가 있으면 그 문자를 LCS에 추가
             if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
-                lcs.append(s1.charAt(i - 1));
-                i--; // 두 문자열의 인덱스 모두 감소
+                lcs.append(s1.charAt(i - 1));  // 일치하면 문자 추가
+                i--;  // 두 문자열의 인덱스 모두 감소
                 j--;
             } else if (dp[i - 1][j] >= dp[i][j - 1]) {
-                // dp[i-1][j]가 더 크면 s1에서 문자를 하나 줄임
-                i--;
+                i--;  // dp[i-1][j]가 더 크면 s1에서 문자를 하나 줄임
             } else {
-                // dp[i][j-1]가 더 크면 s2에서 문자를 하나 줄임
-                j--;
+                j--;  // dp[i][j-1]가 더 크면 s2에서 문자를 하나 줄임
             }
         }
 
-        // LCS는 뒤에서부터 추적했으므로 문자열을 뒤집어 출력
-        System.out.println(lcs.reverse().toString());
+        return lcs.reverse().toString();  // LCS는 뒤에서부터 추적했으므로 뒤집어서 반환
     }
 }
