@@ -41,6 +41,7 @@ public class BOJ1302 {
         // 가장 많이 팔린 책 찾기
         String mostSoldBook = null;
         int maxCount = 0;
+        
 
         for (Map.Entry<String, Integer> entry : bookCount.entrySet()) {
             String book = entry.getKey();
