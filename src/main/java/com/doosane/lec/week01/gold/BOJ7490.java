@@ -4,17 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * 백준 BOJ2800
- * 괄호제거
- * 문제 분석 : 어떤 수식이 주어졌을 때, 괄호를 제거해서 나올 수 있는 서로 다른 식의 개수를 계산하는 프로그램 작성
-
- * 제약 조건 :
- 첫째 줄에 음이 아닌 정수로 이루어진 수식 입력
- 수식 길이 최대 200, 괄호 쌍은 적어도 1개, 많아야 10개
- 숫자, '+', '*', '-', '/', '(', ')'로만 이루어져 있다.
-
- * 의사 결정 :
-
+ * 백준 7490번
+ * 0 만들기
  */
 public class BOJ7490 {
 
@@ -51,9 +42,5 @@ public class BOJ7490 {
         dfs(max, now+1, now+1, 1, sum + (num*sign), str+ "+" +String.valueOf(now+1));
         dfs(max, now+1, now+1, -1, sum + (num*sign), str+ "-" +String.valueOf(now+1));
 
-
     }
-
-
-
 }
