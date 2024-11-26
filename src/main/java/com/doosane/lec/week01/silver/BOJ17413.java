@@ -43,6 +43,7 @@ public class BOJ17413 {
             } else {
                 if(insideTag) {
                     // 태그 내부의 문자들은 그대로 추가
+
                     result.append(c);
 
                 } else {
