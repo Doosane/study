@@ -31,7 +31,7 @@ import java.util.Stack;
  *
  *
  */
-public class BOJ4949 {
+public class BOJ4949_BufferedReader_Stack {
     public static void main(String[] args) throws IOException {
 
         // bufferedReader 로 입력 받기
