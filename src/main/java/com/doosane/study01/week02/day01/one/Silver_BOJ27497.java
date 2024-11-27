@@ -1,4 +1,4 @@
-package com.doosane.study01.week02.one;
+package com.doosane.study01.week02.day01.one;
 
 import java.io.*;
 import java.util.ArrayDeque;
