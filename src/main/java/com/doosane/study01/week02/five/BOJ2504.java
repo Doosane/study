@@ -1,4 +1,4 @@
-package com.doosane.study01.week02.day01.five;
+package com.doosane.study01.week02.five;
 
 import java.io.BufferedReader;
 import java.io.IOException;
