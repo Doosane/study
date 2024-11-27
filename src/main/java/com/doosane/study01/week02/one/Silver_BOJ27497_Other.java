@@ -1,9 +1,9 @@
-package com.doosane.study01.week02.bronze;
+package com.doosane.study01.week02.one;
 
 import java.io.*;
 import java.util.ArrayList;
 
-public class BOJ27497_O {
+public class Silver_BOJ27497_Other {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

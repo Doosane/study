@@ -1,4 +1,4 @@
-package com.doosane.study01.week02.bronze;
+package com.doosane.study01.week02.one;
 
 import java.io.*;
 import java.util.ArrayDeque;
@@ -15,7 +15,7 @@ import java.util.Stack;
  * 2. 입력 받은 문자열을 누른 횟수에 따라 바꾸는 메서드 실행 ( deque 와 stack 개념 이용 )
  * 3. 완성된 문자열 출력
  */
-public class BOJ27497_R {
+public class Silver_BOJ27497_Refactoring {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
