@@ -12,7 +12,8 @@ public class BOJ1769_Refactoring {
         while(X.length() > 1) {
             int sum = 0;
             for(int i = 0; i < X.length(); i++ ) {
-                sum += Integer.parseInt(Character.toString(X.charAt(i)));
+               // sum += Integer.parseInt(Character.toString(X.charAt(i))); => 48348KB	280ms
+                sum += X.charAt(i) - '0'; // => 20416KB 240ms
             }
             X = Integer.toString(sum);
             count++;
