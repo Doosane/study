@@ -32,7 +32,7 @@ import java.io.*;
 // 정환을 도와서 첫 세 음만으로 본인이 음을 아는 노래를 맞히는 프로그램을 완성하자. 이 프로그램은 대문자와 소문자를 구분
 
 import java.util.HashMap;
-public class BOJ31562 {
+public class BOJ31562_HashMap {
     public static void main(String[] args) throws IOException {
         // BufferedReader와 BufferedWriter 사용하여 입력과 출력을 효율적으로 처리
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
